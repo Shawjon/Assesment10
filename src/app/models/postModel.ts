@@ -1,13 +1,13 @@
 
 export class Post {
 
-    constructor(PostName:string, PostDiscription:string) {
-      this.postDiscription = PostDiscription;
+    constructor(PostName:string, PostDescription:string) {
+      this.postDescription = PostDescription;
       this.postName = PostName;
             this.style = "New post";
       
     };
-    public postDiscription:string;
+    public postDescription:string;
     public postName: string;
     public style: string;
     
