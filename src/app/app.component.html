@@ -1,29 +1,30 @@
-<body>
+<body class="Body">
   <h1>Welcome to the Post-Boy App</h1>
-  
-<div class='insertFrom'>
-  <button class="button" (click)='showform()' [hidden]='hidebox1'>New Post</button>
-    <h3 [hidden]='hidebox2'>
-        Subject<input  [(ngModel)] = "tempValue1"/>
-        <br/>
-        <br/>
-        Post description<textarea id='textboxid' [(ngModel)] = "tempValue2"></textarea>
-        <br/>
-        <button class="button" (click)='addPost()'>Post</button>
-      </h3>
+  <div class="BodyStuff">
+    <div class='insertFrom'>
+     <button class="button" (click)='showform()' [hidden]='hidebox1'>New Post</button>
+        <h3 [hidden]='hidebox2'>
+            Subject<input class="inputSubject"  [(ngModel)] = "tempValue1"/>
+            <br/>
+            <br/>
+            Post description<textarea id='textboxid' [(ngModel)] = "tempValue2"></textarea>
+            <br/>
+            <button class="button" (click)='addPost()'>Post</button>
+        </h3>
+    </div>
+  <br/>
+  <div [hidden]='hidebox1' class='textStuff'>
+      <ul [ngClass]='post.style'   *ngFor="let post of postList;let i = index; trackBy: trackByPost">
+        <li class="wholePost">
+          <div>
+          <div class="Subject">{{post.postName}}</div>
+          <div class="PostBody">{{post.postDescription}} </div>
+        </div>
+          <button class="xButton" (click)='remove(i)'>x</button>
+      </li>
+      </ul>
+  </div>
 </div>
-<br/>
-<div class='textStuff'>
-    <ul [ngClass]='post.style'   *ngFor="let post of postList;let i = index; trackBy: trackByPost">
-      <li class="wholePost">
-        <div>
-        <div class="Subject"> Subject:  {{post.postName}}</div>
-        <div class="PostBody"> {{post.postDescription}} </div>
-      </div>
-        <button class="xButton" (click)='remove(i)'>x</button>
-    </li>
-    </ul>
-</div>
-</body>
 
 <router-outlet></router-outlet>
+</body>
