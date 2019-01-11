@@ -1,16 +1,21 @@
-<body class="Body">
-  <h1>Welcome to the Post-Boy App</h1>
+<body class="body">
+  <h1>Welcome to Post-Boy</h1>
   <div class="BodyStuff">
     <div class='insertFrom'>
-     <button class="button" (click)='showform()' [hidden]='hidebox1'>New Post</button>
+     <button class="button1" (click)='showform()' [hidden]='hidebox1'>New Post</button>
         <h3 [hidden]='hidebox2'>
             Subject<input class="inputSubject"  [(ngModel)] = "tempValue1"/>
             <br/>
             <br/>
             Post description<textarea id='textboxid' [(ngModel)] = "tempValue2"></textarea>
             <br/>
-            <button class="button" (click)='addPost()'>Post</button>
+            <button [hidden]='hidebox2' class="button" (click)='addPost()'>Post</button>
+            
+            
         </h3>
+        
+        <div class="Error" [hidden]='hidebox3'>This post does not work, please try again</div>
+        <button [hidden]='hidebox4' class="xButton" (click)='goBack()'>Go Back</button>
     </div>
   <br/>
   <div [hidden]='hidebox1' class='textStuff'>

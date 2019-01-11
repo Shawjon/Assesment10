@@ -19,14 +19,15 @@ export class AppComponent {
   tempValue2 ='';
   hidebox1: boolean = false;
   hidebox2: boolean = true;
+  hidebox3:boolean = true;
+  hidebox4:boolean = true;
   constructor(
    
     ) { }
   counter:number;
 
   postList: Post[] = [
-    {postName:"Test", postDescription:"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 1234567890123456789012345678901234567890 12345678901234567890 ", style:"new"}
-    ,{postName:"Dog", postDescription:"Dogs are great, dont you think?", style:"new"},
+    {postName:"Dog", postDescription:"Dogs are great, dont you think?", style:"new"},
     {postName:"Cat", postDescription:"Cats are cool, not as much as dogs but they can be pretty close.", style:"new"},
     {postName:"Apple", postDescription:"Apples are a great fruit, I really like them.", style:"new"}
     
@@ -35,7 +36,13 @@ export class AppComponent {
     return post.postName;
 
   }
+goBack(){
+  this.hidebox1 = false;
+    this.hidebox2 = true;
+    this.hidebox3 = true;
+    this.hidebox4 = true;
 
+}
   
   addPost() {
     if((this.tempValue1 !='' && this.tempValue2 !='')  ){
@@ -47,9 +54,13 @@ export class AppComponent {
     this.tempValue2 = '';
     this.hidebox1 = false;
     this.hidebox2 = true;
+    this.hidebox3 = true;
+    this.hidebox4 = true;
       }
     }else{
-      alert('Post is not complete');
+      this.hidebox3 = false;
+      this.hidebox2 = true;
+      this.hidebox4 = false;
     }
     }
 
@@ -59,6 +70,7 @@ export class AppComponent {
     showform(){
       this.hidebox1 = true;
       this.hidebox2 = false;
+      this.hidebox4 = false;
     }
   ngOnInit() {}
      

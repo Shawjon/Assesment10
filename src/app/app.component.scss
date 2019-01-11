@@ -9,16 +9,8 @@ h1{
     background-color: rgb(202, 243, 255);
     
 }
-.Body{
+.body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: #000000;
-    background-size: 100%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0 0;
-
-    
-background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
 
 
 }
@@ -61,6 +53,22 @@ background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beaut
 }
   
 .button:hover {
+    
+    background-color: rgb(18, 136, 2); 
+    color: white;
+}
+.button1 {
+    width: 140px;
+    height: 35px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    border: #D0E4F5;
+    color: rgb(5, 12, 36);
+    background-color: aliceblue;
+}
+  
+.button1:hover {
     background-color: rgb(18, 136, 2); 
     color: white;
 }
@@ -72,6 +80,9 @@ border-radius: 8px;
 border: #D0E4F5;
 color: rgb(5, 12, 36);
 background-color: aliceblue;
+}
+.Error{
+    color:  rgb(255, 51, 0);
 }
   
 .xButton:hover {
@@ -90,6 +101,7 @@ max-height: 15%;
 
 }
 .wholePost{
+    padding: 3px;
     background-color: #D0E4F5;
     overflow: auto;
     border: 2px groove rgba(76,210,255,0.23);    display: flex; 
