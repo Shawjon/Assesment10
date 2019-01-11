@@ -4,10 +4,13 @@
     <div class='insertFrom'>
      <button class="button1" (click)='showform()' [hidden]='hidebox1'>New Post</button>
         <h3 [hidden]='hidebox2'>
-            Subject<input class="inputSubject"  [(ngModel)] = "tempValue1"/>
+          <div>Subject</div>
+          
+            <input class="inputSubject"  [(ngModel)] = "tempValue1"/>
             <br/>
+            <div>Description</div>
             <br/>
-            Post description<textarea id='textboxid' [(ngModel)] = "tempValue2"></textarea>
+            <textarea id='textboxid' [(ngModel)] = "tempValue2"></textarea>
             <br/>
             <button [hidden]='hidebox2' class="button" (click)='addPost()'>Post</button>
             
